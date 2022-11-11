@@ -1,9 +1,9 @@
 #include "livros.h"
 #include <iostream>
 
-Livros::Livros(std::string nome, std::string descricao, int versao){
+Livros::Livros(std::string nome, std::string autor, int versao){
     _nome = nome;
-    _descricao = descricao;
+    _autor = autor;
     _versao = versao;
 }
 
@@ -15,8 +15,8 @@ std::string Livros::get_nome(){
     return _nome;
 }
 
-std::string Livros::get_descricao(){
-    return _descricao;
+std::string Livros::get_autor(){
+    return _autor;
 }
 
 int Livros::get_versao(){
