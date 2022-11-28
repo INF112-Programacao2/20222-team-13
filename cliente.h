@@ -10,8 +10,8 @@ class Cliente : public Pessoa {
         double _saldoDevedor;
     public:
         std::string get_endereco();
-        double  get_saldoDevedor();
-        void renovarEmprestimo(int livro);
-        void pagarMulta(double valor);
+        double get_saldoDevedor();
+        void virtual renovarEmprestimo(int livro) = 0;
+        void virtual pagarMulta(double valor) = 0;
 };
 #endif

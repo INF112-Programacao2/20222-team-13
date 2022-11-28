@@ -13,6 +13,8 @@ class Emprestimo {
         int _idCliente;
         int _idLivro;
         int _idFuncionario;
+        int _mesDevolucao;
+        int _anoDevolucao;
     public:
         Emprestimo(int idCliente, int idLivro, int idFuncionario);
         int get_id();

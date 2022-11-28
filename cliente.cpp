@@ -9,10 +9,6 @@ double Cliente::get_saldoDevedor(){
     return _saldoDevedor;
 }
         
-void Cliente::renovarEmprestimo(int livro){
+//void Cliente::renovarEmprestimo(int livro){}
 
-}
-
-void Cliente::pagarMulta(double valor){
-    
-}
+//void Cliente::pagarMulta(double valor){}
