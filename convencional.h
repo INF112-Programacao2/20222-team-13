@@ -10,8 +10,9 @@ class ClienteConvencional : public Cliente {
         int _numeroDias;
         double _valorPago;
     public:
-        ClienteConvencional(std::string nome, std::string endereco, double saldoDevedor);
+        ClienteConvencional(int id, std::string nome, std::string endereco, double saldoDevedor);
         int get_numeroDias();
         double get_valorPago();
+        void renovarEmprestimo(int idLivro);
 };
 #endif

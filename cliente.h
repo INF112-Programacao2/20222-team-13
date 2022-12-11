@@ -11,7 +11,8 @@ class Cliente : public Pessoa {
     public:
         std::string get_endereco();
         double get_saldoDevedor();
-        void virtual renovarEmprestimo(int livro) = 0;
-        void virtual pagarMulta(double valor) = 0;
+        int virtual get_numeroDias() = 0;
+        double virtual get_valorPago() = 0;
+        void virtual renovarEmprestimo(int idLivro) = 0;
 };
 #endif

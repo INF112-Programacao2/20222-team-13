@@ -10,8 +10,9 @@ class ClienteVip : public Cliente {
         int _numeroDias;
         double _valorPago;
     public:
-        ClienteVip(std::string nome, std::string endereco, double saldoDevedor);
+        ClienteVip(int id, std::string nome, std::string endereco, double saldoDevedor);
         int get_numeroDias();
         double get_valorPago();
+        void renovarEmprestimo(int idLivro);
 };
 #endif

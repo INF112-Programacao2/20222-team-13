@@ -28,7 +28,7 @@ void Funcionario::cadastrarLivro(){
     std::cout << "Qual o id do livro? ";
     std::cin >> id;
     std::ofstream arquivo("livros.txt", std::ios::app);
-        arquivo<<std::endl << nome << " " << autor << " "<< versao << " " << id;
+        arquivo<< nome << " " << autor << " "<< versao << " " << id << std::endl;
         arquivo.close(); 
     std::cout<<"\nLivro cadastrado com sucesso!\n";
 }
@@ -47,7 +47,7 @@ void Funcionario::cadastrarCliente(){
     std::cout << "Qual a permissao? (1. Convencional; 2. Vip): ";
     std::cin >> tipo;
     if(tipo>2 || tipo<1){
-        std::cout<<"\nOpção impossivel, tente novamente!\n";
+        throw std::invalid_argument("Tipo do cliente invalido.");
     }
     else{
         std::ofstream arquivo("usuarios.txt", std::ios::app);
@@ -63,7 +63,7 @@ void Funcionario::pegarLivro(Cliente &cliente, Livros &livro){
     std::cin >> id;
     
     std::ofstream arquivo("emprestimo.txt", std::ios::app);
-    arquivo << std::endl << id << " " << cliente.get_id() << " " << livro.get_id() << " " << this->get_id();
+    arquivo << std::endl << id << " " << cliente.get_id() << " " << livro.get_id() << " " << this->get_id() << " " << cliente.get_numeroDias() << " " << cliente.get_valorPago();
 
     std::cout<<"\nEmprestimo cadastrado com sucesso!\n";
 
@@ -93,7 +93,7 @@ void Funcionario::devolverLivro(Cliente &cliente, Livros &livro){
         }
     }
     if(!existe){
-        std::cout<<"\nLivro nao encontrado!"<< std::endl;
+        std::cout<<"\nEmprestimo nao encontrado!"<< std::endl;
     }
     arquivo.close();
     temp.close();

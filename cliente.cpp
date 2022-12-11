@@ -8,7 +8,3 @@ std::string Cliente:: get_endereco(){
 double Cliente::get_saldoDevedor(){
     return _saldoDevedor;
 }
-        
-//void Cliente::renovarEmprestimo(int livro){}
-
-//void Cliente::pagarMulta(double valor){}
